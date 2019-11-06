@@ -11,4 +11,4 @@ Resources:
 * Our website [muse.dev](https://muse.dev)
 * The [Github app](https://github.com/apps/muse-dev) is currently in closed
   beta.  Please contact us at hello@muse.dev to enter the trial.
-* [Documentation](https://docs.muse.dev)
+* [Documentation](https://docs.muse.dev/docs/github-cloud/installation/)
