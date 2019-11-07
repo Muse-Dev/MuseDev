@@ -1,6 +1,6 @@
 # Muse-Dev
 
-MuseDev delivers a DevOps-native analysis platform that helps developers find
+MuseDev delivers a DevOps-native code analysis platform that helps developers find
 and fix their most elusive bugs. MuseDev orchestrates code analysis to
 automatically run at each pull-request and deliver results as comments during
 code review. By integrating into developers’ existing workflow, Muse helps teams
