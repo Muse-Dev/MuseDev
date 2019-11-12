@@ -32,6 +32,17 @@ void print_point(struct POINT *pnt)
         get_x(pnt), get_y(pnt));
 }
 
+int memory_leak()
+{
+    struct POINT *p = malloc(sizeof(struct POINT));
+
+    if (p == NULL) {
+        return (-2);
+    }
+
+    return -1;
+}
+
 int main(void)
 {
     struct POINT *pnt = malloc(sizeof(struct POINT));
