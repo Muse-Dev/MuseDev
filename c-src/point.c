@@ -32,6 +32,13 @@ void print_point(struct POINT *pnt)
         get_x(pnt), get_y(pnt));
 }
 
+void dead_store(struct POINT *pnt)
+{
+    int new_x = 9;
+    new_x = get_y(pnt);
+    set_x(pnt, new_x);
+}
+
 int main(void)
 {
     struct POINT *pnt = malloc(sizeof(struct POINT));
