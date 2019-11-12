@@ -32,6 +32,45 @@ void print_point(struct POINT *pnt)
         get_x(pnt), get_y(pnt));
 }
 
+int resource_leak()
+{
+    FILE *fp=fopen("c:\\some\file", "r");
+
+    if (fp == NULL) {
+        return 1;
+    }
+
+    return 0;
+}
+
+int memory_leak()
+{
+    struct POINT *p = malloc(sizeof(struct POINT));
+
+    if (p == NULL) {
+        return (-2);
+    }
+
+    return -1;
+}
+
+void dead_store(struct POINT *pnt)
+{
+    int new_x = 9;
+    new_x = get_y(pnt);
+    set_x(pnt, new_x);
+}
+
+int null_dereference()
+{
+    struct POINT *p = malloc(sizeof(struct POINT));
+
+    get_x(p);
+    free(p);
+
+    return 0;
+}
+
 int main(void)
 {
     struct POINT *pnt = malloc(sizeof(struct POINT));
