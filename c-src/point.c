@@ -32,12 +32,13 @@ void print_point(struct POINT *pnt)
         get_x(pnt), get_y(pnt));
 }
 
-int null_dereference()
+int resource_leak()
 {
-    struct POINT *p = malloc(sizeof(struct POINT));
+    FILE *fp=fopen("c:\\some\file", "r");
 
-    get_x(p);
-    free(p);
+    if (fp == NULL) {
+        return 1;
+    }
 
     return 0;
 }
